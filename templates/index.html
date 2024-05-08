@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta Óptima</title>
+</head>
+<body>
+    <h1>Ruta Óptima Hill</h1>
+    <p>La ruta óptima es:</p>
+    <ul id="rutaLista">
+        {% for ciudad in ruta %}
+            <li>{{ ciudad }}</li>
+        {% endfor %}
+    </ul>
+    <p>La distancia total recorrida es: <span id="distancia">{{ distancia_total }}</span></p>
+    <button onclick="actualizarRuta()">Actualizar Ruta y Distancia</button>
+
+    <script>
+        function actualizarRuta() {
+            // Recargar la página
+            location.reload();
+        }
+    </script>
+</body>
+</html>
